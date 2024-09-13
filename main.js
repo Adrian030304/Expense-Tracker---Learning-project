@@ -1,3 +1,4 @@
+const incomeForm = document.getElementById("income-form")
 const incomeInput = document.getElementById("income-description");
 const incomeAmountInput = document.getElementById("income-amount");
 
@@ -12,7 +13,21 @@ const totalIncome = document.getElementById("total-income");
 const balance = document.getElementById("balance");
 
 
+incomeForm.addEventListener("submit",(event)=>{
+    event.preventDefault();
+    const description = incomeInput.value.trim()
+    const amount = parseFloat(incomeAmountInput.value.trim())
+    const category = "---"
+    const type = "Income"
 
+    if (description === '' || isNaN(amount) || amount <= 0) {
+        alert('Please enter a valid income description and amount.');
+        return;
+    }
+    addTransaction(description,amount,category,type)
+    updateSummary()
+    clearInputs()
+})
 
 expenseForm.addEventListener("submit",(event)=>{
     event.preventDefault();

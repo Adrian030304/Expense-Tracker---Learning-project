@@ -11,24 +11,26 @@
         <h1>Expense Tracker</h1>
         <div class="section">
             <h2>Income</h2>
-            <div class="input-group">
-                <label for="income-description">Description:</label>
-                <input type="text" name="income-description" id="income-description" placeholder="Eg salary...">
-            </div>
-            <div class="input-group">
-                <label for="income-amount">Amount(RON):</label>
-                <input type="text" name="income-amount" id="income-amount" placeholder="Ex 100,000.00">
-            </div>
-            <div class="button-group">
-                <button>Add income</button>
-            </div>
+            <form id="income-form">
+                <div class="input-group">
+                    <label for="income-description">Description:</label>
+                    <input type="text" name="income-description" id="income-description" placeholder="Ex salary...">
+                </div>
+                <div class="input-group">
+                    <label for="income-amount">Amount(RON):</label>
+                    <input type="text" name="income-amount" id="income-amount" placeholder="Ex 10,000.00">
+                </div>
+                <div class="button-group">
+                    <button form="income-form">Add income</button>
+                </div>
+            </form>
         </div>
         <div class="section">
             <h2>Expenses</h2>
             <form id="expense-form">
                 <div class="input-group">
                     <label for="expense-description">Description:</label>
-                    <input type="text" name="expense-description" id="expense-description" placeholder="Eg utilit...">
+                    <input type="text" name="expense-description" id="expense-description" placeholder="Ex utilit...">
                 </div>
                 <div class="input-group">
                     <label for="expense-amount">Amount (RON):</label>
@@ -45,7 +47,7 @@
                     </select>
                 </div>
                 <div class="button-group">
-                    <button>Add Expense</button>
+                    <button form="expense-form">Add Expense</button>
                 </div>
             </form>
         </div>
