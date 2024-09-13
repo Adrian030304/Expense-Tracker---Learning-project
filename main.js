@@ -6,9 +6,12 @@ const expenseInput = document.getElementById("expense-description");
 const expenseAmountInput = document.getElementById("expense-amount");
 const categoryInput = document.getElementById("expense-category");
 const transactionList = document.getElementById("transaction-history");
+
 const totalExpense = document.getElementById("total-expenses");
 const totalIncome = document.getElementById("total-income");
 const balance = document.getElementById("balance");
+
+
 
 
 expenseForm.addEventListener("submit",(event)=>{
@@ -25,6 +28,7 @@ expenseForm.addEventListener("submit",(event)=>{
     
     addTransaction(description,amount,category,type)
     updateSummary()
+    clearInputs()
 })
 
 function addTransaction(description,amount,category,type) {
@@ -69,4 +73,8 @@ function updateSummary() {
 
 }
 
-console.log(updateSummary())
+function clearInputs() {
+    expenseInput.value = '';
+    expenseAmountInput.value = '';
+    categoryInput.value = "Housing"
+}
