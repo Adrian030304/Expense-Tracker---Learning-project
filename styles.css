@@ -6,7 +6,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .container{
@@ -77,6 +77,9 @@ table {
     border-collapse: collapse;
     margin-bottom: 20px;
 }
+.bod>table{
+    
+}
 
 th, td {
     text-align: left;
@@ -105,6 +108,7 @@ td button {
 td button:hover {
     background-color: #C71585;
 }
+
 
 .summary {
     background-color: #d4bfec;
