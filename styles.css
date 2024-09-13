@@ -33,9 +33,6 @@ h2 {
 
 .input-group{
     margin-bottom: 15px;
-    border-color: aqua;
-    border-style: solid;
-    border-width: 1px;
 }
 
 .input-group label{
@@ -52,4 +49,21 @@ h2 {
     border-radius: 5px;
     box-sizing: border-box;
     font-size: 16px;
+}
+
+
+.button-group button,
+.clear-button-group button {
+    background-color: #5505af;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button-group button:hover,
+.clear-button-group button:hover {
+    background-color: #FF1493;
 }
